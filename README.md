@@ -20,7 +20,7 @@ Apply filters to your query:
 `courses = connect.get_courses_by_query("all courses", filters.AUTUMN, filters.WAY_AII)`
 
 ## Sample Program ##
-```
+```python
 from explorecourses import *
 
 connect = CourseConnection()
