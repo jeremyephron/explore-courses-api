@@ -1,3 +1,4 @@
+.DS_STORE
 .pytest_cache/
 */__pycache__/
 build/
