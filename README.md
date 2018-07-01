@@ -4,19 +4,24 @@ This package is a Python API for Stanford's Explore Courses site, which enables 
 
 ## Installation ##
 Type the following command in terminal to install:
+
 `pip install explorecourses`
 
 ## Usage ##
 Import the package into your Python program:
+
 `from explorecourses import *`
 
 Create a new CourseConnection:
+
 `connect = CourseConnection()`
 
 Query the Explore Courses database by department code:
+
 `courses = connect.get_courses_by_department("MATH", year="2017-2018")`
 
 Apply filters to your query:
+
 `courses = connect.get_courses_by_query("all courses", filters.AUTUMN, filters.WAY_AII)`
 
 ## Sample Program ##

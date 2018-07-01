@@ -2,7 +2,7 @@ import setuptools
 
 setuptools.setup(
     name="explorecourses",
-    version="0.0.1",
+    version="1.0.0",
     url="https://github.com/illiteratecoder/Explore-Courses-API",
     author="Jeremy Ephron",
     author_email="jeremye@stanford.edu",
