@@ -8,7 +8,7 @@ Type the following command in terminal to install:
 `pip install explorecourses`
 
 ## Usage ##
-Import the package into your Python program:
+Import the package's classes into your Python program:
 
 `from explorecourses import *`
 
@@ -27,6 +27,7 @@ Apply filters to your query:
 ## Sample Program ##
 ```python
 from explorecourses import *
+from explorecourses import filters
 
 connect = CourseConnection()
 
