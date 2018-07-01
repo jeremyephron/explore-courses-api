@@ -475,8 +475,8 @@ class Course(object):
         """
         Overloads the equality (==) operator for the Course class.
         
-        A Course can only be compared to another Course. Courses are compared 
-        first by subject, then by code, and last by year.
+        A Course can only be compared to another Course. Course equality is 
+        determined by course ID.
 
         Args:
             other: The right operand of the equality operator.
@@ -488,10 +488,7 @@ class Course(object):
         """
 
         if type(other) != Course: return False
-        if self.subject != other.subject: return False
-        if self.code != other.code: return False
-        if self.year != other.year: return False
-        return True
+        return self.course_id == other.course_id
 
 
     def __lt__(self, other):
