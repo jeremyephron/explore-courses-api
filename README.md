@@ -12,6 +12,10 @@ Import the package's classes into your Python program:
 
 `from explorecourses import *`
 
+Import the filters module if you would like to use search filters:
+
+`from explorecourses import filters`
+
 Create a new CourseConnection:
 
 `connect = CourseConnection()`
