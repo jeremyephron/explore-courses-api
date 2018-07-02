@@ -13,6 +13,7 @@ class CourseConnection():
     """
     This class is the main entrypoint for the Explore Courses API, which 
     establishes the HTTP connection and makes all requests.
+
     """
 
     _URL = "http://explorecourses.stanford.edu/"

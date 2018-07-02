@@ -26,6 +26,7 @@ class Department(object):
         name (str): The department name.
         code (str): The department code used for searching courses by 
             department.
+
     """
 
     def __init__(self, elem: Element):
@@ -504,6 +505,7 @@ class Course(object):
         Returns:
             bool: True if the object being compared is less than the Course, 
                 False otherwise.
+
         """
 
         if type(other) != Course: return False
@@ -529,6 +531,7 @@ class Course(object):
         Returns:
             bool: True if the object being compared is greater than the Course, 
                 False otherwise.
+
         """
 
         if type(other) != Course: return False
