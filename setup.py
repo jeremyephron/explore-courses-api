@@ -9,7 +9,9 @@ setuptools.setup(
     description="A Python API for Stanford Explore Courses",
     long_description=open('README.md').read(),
     packages=setuptools.find_packages(),
-    install_requires=[],
+    install_requires=[
+        'requests>=2'
+    ],
     classifiers=(
         'Programming Language :: Python',
         'Programming Language :: Python :: 3',
