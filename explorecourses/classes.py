@@ -12,6 +12,7 @@ Includes:
     - LearningObjective
     - Attribute
     - Tag
+
 """
 
 from typing import Tuple
@@ -88,7 +89,7 @@ class School(object):
         Returns:
             Department: The department matched by the given identifier if a 
                 match was found, None otherwise.
-        
+
         """
 
         idf = idf.lower()
@@ -475,7 +476,7 @@ class Course(object):
     def __eq__(self, other):
         """
         Overloads the equality (==) operator for the Course class.
-        
+
         A Course can only be compared to another Course. Course equality is 
         determined by course ID.
 
@@ -508,7 +509,10 @@ class Course(object):
 
         """
 
-        if type(other) != Course: return False
+        if type(other) != Course:
+            raise TypeError(f"'<' not supported between instances of "
+                            f"'{type(self)}' and '{type(other)}'")
+
         if self.subject != other.subject:
             return self.subject < other.subject
         if self.code != other.code:
@@ -534,14 +538,11 @@ class Course(object):
 
         """
 
-        if type(other) != Course: return False
-        if self.subject != other.subject:
-            return self.subject > other.subject
-        if self.code != other.code:
-            return self.code > other.code
-        if self.year != other.year:
-            return self.year > other.year
-        return False
+        if type(other) != Course:
+            raise TypeError(f"'>' not supported between instances of "
+                            f"'{type(self)}' and '{type(other)}'")
+
+        return not self.__lt__(other) and not self.__eq__(other)
 
 
     def __le__(self, other):
@@ -559,6 +560,10 @@ class Course(object):
             the Course, False otherwise.
 
         """
+
+        if type(other) != Course:
+            raise TypeError(f"'<=' not supported between instances of "
+                            f"'{type(self)}' and '{type(other)}'")
 
         return self.__lt__(other) or self.__eq__(other)
 
@@ -578,5 +583,8 @@ class Course(object):
             the Course, False otherwise.
 
         """
+        if type(other) != Course:
+            raise TypeError(f"'>=' not supported between instances of "
+                            f"'{type(self)}' and '{type(other)}'")
 
         return self.__gt__(other) or self.__eq__(other)

@@ -19,7 +19,7 @@ class CourseConnection():
     _URL = "http://explorecourses.stanford.edu/"
 
     def __init__(self):
-        """ 
+        """
         Constructs a new CourseConnection by beginning a requests session.
 
         """
@@ -54,7 +54,7 @@ class CourseConnection():
         Gets a school within the university by name.
 
         Args:
-            name (str): The name of the school.the
+            name (str): The name of the school.
 
         Returns:
             School: The school if it exists, None otherwise.

@@ -1,5 +1,7 @@
 from xml.etree import ElementTree as ET
 
+import pytest
+
 from explorecourses import *
 
 class TestCourse(object):
@@ -1235,3 +1237,16 @@ class TestCourse(object):
         assert math19 < math20
         assert math20 >= math20
         assert math19 <= math19
+
+        with pytest.raises(TypeError):
+            math19 < 9
+
+        with pytest.raises(TypeError):
+            math20 > "test"
+
+        with pytest.raises(TypeError):
+            math19 <= [1, 2, 3]
+
+        with pytest.raises(TypeError):
+            math20 >= 10
+
