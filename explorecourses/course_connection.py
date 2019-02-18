@@ -16,7 +16,7 @@ class CourseConnection():
 
     """
 
-    _URL = "http://explorecourses.stanford.edu/"
+    _URL = "https://explorecourses.stanford.edu/"
 
     def __init__(self):
         """

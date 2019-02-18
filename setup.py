@@ -12,6 +12,8 @@ setuptools.setup(
     install_requires=[
         'requests>=2'
     ],
+    setup_requires=["pytest-runner"],
+    tests_require=["pytest"],
     classifiers=(
         'Programming Language :: Python',
         'Programming Language :: Python :: 3',
