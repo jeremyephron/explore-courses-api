@@ -40,7 +40,10 @@ class CourseConnection():
 
         """
 
-        payload = {"view": "xml-20120105", "year": academic_year}
+        payload = {
+            "view": "xml-20200810",
+            "year": academic_year.replace('-', '')
+        }
         res = self._session.get(self._URL, params=payload)
 
         root = ET.fromstring(res.content)
@@ -112,12 +115,13 @@ class CourseConnection():
         url = self._URL + "search"
 
         payload = {
-            "view": "xml-20140630",
+            "view": "xml-20200810",
             "filter-coursestatus-Active": "on",
             "q": query,
         }
         payload.update({f: "on" for f in filters})
-        if year: payload.update({"academicYear": year})
+        if year:
+            payload.update({"academicYear": year.replace('-', '')})
 
         res = self._session.get(url, params=payload)
 

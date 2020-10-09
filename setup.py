@@ -2,12 +2,13 @@ import setuptools
 
 setuptools.setup(
     name="explorecourses",
-    version="1.0.5",
+    version="1.0.6",
     url="https://github.com/illiteratecoder/Explore-Courses-API",
     author="Jeremy Ephron",
     author_email="jeremye@stanford.edu",
     description="A Python API for Stanford Explore Courses",
     long_description=open('README.md').read(),
+    long_description_content_type='text/markdown',
     packages=setuptools.find_packages(),
     install_requires=[
         'requests>=2'
